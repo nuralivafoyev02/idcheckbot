@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>MLBB Server Detector Bot — Serverni 1 Soniyada Aniqlang</title>
+    <meta name="description"
+        content="Mobile Legends: Bang Bang o'yin ID orqali serverni aniqlash, ulanmalarni tekshirish va to'liq profil ko'rish. Bepul Telegram bot.">
+    <meta name="keywords" content="MLBB, Mobile Legends, server detector, bot, telegram, ID check">
+    <meta property="og:title" content="MLBB Server Detector Bot">
+    <meta property="og:description" content="ID kiriting — server tayyor. Bepul Telegram bot.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand" data-i18n="nav_brand">MLBB Bot</a>
+            <div class="nav-actions">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn" id="langBtn" aria-label="Change language">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        <span id="langLabel">UZ</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button class="lang-option active" data-lang="uz">O'zbek</button>
+                        <button class="lang-option" data-lang="ru">Русский</button>
+                        <button class="lang-option" data-lang="kz">Қазақша</button>
+                    </div>
+                </div>
+                <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <a href="https://t.me/checkmlbbidBot" class="btn btn-sm nav-start-btn" target="_blank" rel="noopener"
+                    data-i18n="nav_start">Boshlash</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-inner">
+            <div class="hero-badge animate-in" data-i18n="hero_badge">Tez • Oddiy • Bepul</div>
+            <h1 class="hero-title animate-in" data-i18n="hero_title">Serverni aniqlash — 1 soniyada</h1>
+            <p class="hero-subtitle animate-in" data-i18n="hero_subtitle">ID ni kiriting, server tayyor. Qidirib
+                yurishingiz shart emas.</p>
+            <a href="https://t.me/checkmlbbidBot" class="btn btn-lg animate-in" target="_blank" rel="noopener"
+                data-i18n="hero_cta">Botni ochish</a>
+        </div>
+    </header>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="nav_features">Imkoniyatlar</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_1_title">Server aniqlash</h3>
+                    <p class="feature-desc" data-i18n="feature_1_desc">O'yin ID ni yuboring — bot sizning qaysi serverda
+                        ekanligingizni darhol aytib beradi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_2_title">Ulanmalar tekshirish</h3>
+                    <p class="feature-desc" data-i18n="feature_2_desc">Akkauntingiz qaysi qurilmalarga bog'langanini,
+                        kimlar bilan ulanganini ko'ring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_3_title">To'liq profil</h3>
+                    <p class="feature-desc" data-i18n="feature_3_desc">Rank, herolar, statistika — barchasi bitta
+                        xabarda.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature_4_title">Inline rejim</h3>
+                    <p class="feature-desc" data-i18n="feature_4_desc">Istalgan chatda @botusername + ID yozing.
+                        Guruhdan chiqmagan holda tekshiring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="how_title">3 qadamda ishlaydi</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3 class="step-title" data-i18n="step_1_title">Botni boshlang</h3>
+                    <p class="step-desc" data-i18n="step_1_desc">/start buyrug'ini yuboring</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3 class="step-title" data-i18n="step_2_title">ID kiriting</h3>
+                    <p class="step-desc" data-i18n="step_2_desc">O'yin ID ni yoki ID + Server kiriting</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3 class="step-title" data-i18n="step_3_title">Natijani oling</h3>
+                    <p class="step-desc" data-i18n="step_3_desc">Server, rank, herolar — hammasi tayyor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="testimonials_title">Foydalanuvchilar nima deydi</h2>
+            </div>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonials-track">
+                <div class="testimonials-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_1_text">Oldin serverni bilish uchun do'stlarimdan
+                            so'rardim. Endi bot bor — 1 soniyada tayyor. Zamonaviy texnologiya degan shu!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">J</div>
+                            <span class="testimonial-name" data-i18n="test_1_name">Jasurbek</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_2_text">Ulanmalar tekshiruvi juda foydali.
+                            Akkauntimni himoya qilish uchun doimiy tekshiraman.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">N</div>
+                            <span class="testimonial-name" data-i18n="test_2_name">Nodira</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_3_text">Guruhda do'stlarimga ham berib yubordim.
+                            Endi hammasi bir joyda. Inline rejim ajoyib!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <span class="testimonial-name" data-i18n="test_3_name">Sardor</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_4_text">Profil ko'rish funksiyasi menga ko'p yordam
+                            berdi. Hero pick rate'larimni bilib oldim.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">D</div>
+                            <span class="testimonial-name" data-i18n="test_4_name">Dilshod</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_5_text">Boshqa botlar bilan solishtirsam, shu bot
+                            ancha tez va ishonchli. Har kuni ishlataman.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <span class="testimonial-name" data-i18n="test_5_name">Malika</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_6_text">Epik team uchun server aniqlash kerak edi. 3
+                            soniyada hammasi tayyor bo'ldi. Judayam qulay!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">A</div>
+                            <span class="testimonial-name" data-i18n="test_6_name">Abdulloh</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_7_text">Rus tilida ham ishlaydi, do'stlarim ham
+                            foydalanadi. Hamma joyda bir xil ishlaydi.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">K</div>
+                            <span class="testimonial-name" data-i18n="test_7_name">Kamola</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_8_text">Akkauntimni buzishganida ulanmalardan qaysi
+                            qurilmada ekanini bildim. Bot tufayli tezda o'zgartirdim.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">R</div>
+                            <span class="testimonial-name" data-i18n="test_8_name">Rustam</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_9_text">Yangi sezonda server o'zgarganini bilmoqchi
+                            edim. Bot bir zumda aniq natija berdi. Zo'r!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">G</div>
+                            <span class="testimonial-name" data-i18n="test_9_name">Gulnora</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_10_text">Mening 5 ta akkauntim bor, hammasini
+                            tekshirdim. Bot hech qachon xato bermadi. 100% ishonchli.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">0</div>
+                            <span class="testimonial-name" data-i18n="test_10_name">001javox</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-slide" aria-hidden="true">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_1_text">Oldin serverni bilish uchun do'stlarimdan
+                            so'rardim. Endi bot bor — 1 soniyada tayyor. Zamonaviy texnologiya degan shu!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">O</div>
+                            <span class="testimonial-name" data-i18n="test_1_name">Orvynox</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_2_text">Ulanmalar tekshiruvi juda foydali.
+                            Akkauntimni himoya qilish uchun doimiy tekshiraman.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">J</div>
+                            <span class="testimonial-name" data-i18n="test_2_name">Jamshid Inomov</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_3_text">Guruhda do'stlarimga ham berib yubordim.
+                            Endi hammasi bir joyda. Inline rejim ajoyib!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <span class="testimonial-name" data-i18n="test_3_name">Sardor</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_4_text">Profil ko'rish funksiyasi menga ko'p yordam
+                            berdi. Hero pick rate'larimni bilib oldim.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">D</div>
+                            <span class="testimonial-name" data-i18n="test_4_name">Dilshod</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_5_text">Boshqa botlar bilan solishtirsam, shu bot
+                            ancha tez va ishonchli. Har kuni ishlataman.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <span class="testimonial-name" data-i18n="test_5_name">Malika</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_6_text">Epik team uchun server aniqlash kerak edi.
+                            0.01
+                            soniyada hammasi tayyor bo'ldi. Judayam qulay!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">R</div>
+                            <span class="testimonial-name" data-i18n="test_6_name">Rimuru Tempest</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_7_text">Rus tilida ham ishlaydi, do'stlarim ham
+                            foydalanadi. Hamma joyda bir xil ishlaydi.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">Ш</div>
+                            <span class="testimonial-name" data-i18n="test_7_name">Шавкатович</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_8_text">Akkauntimni buzishganida ulanmalardan qaysi
+                            qurilmada ekanini bildim. Bot tufayli tezda o'zgartirdim.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">K</div>
+                            <span class="testimonial-name" data-i18n="test_8_name">Kᴜʀᴀʏᴀᴍɪ</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_9_text">Yangi sezonda server o'zgarganini bilmoqchi
+                            edim. Bot bir zumda aniq natija berdi. Zo'r!</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">H</div>
+                            <span class="testimonial-name" data-i18n="test_9_name">Husanjon Erkinjonov</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text" data-i18n="test_10_text">Mening 5 ta akkauntim bor, hammasini
+                            tekshirdim. Bot hech qachon xato bermadi. 100% ishonchli.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">❤</div>
+                            <span class="testimonial-name" data-i18n="test_10_name">❤Скρσмнαя❤</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="faq_title">Tez-tez beriladigan savollar</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-q" data-i18n="faq_1_q">Bot qanchalik tez ishlaydi?</summary>
+                    <p class="faq-a" data-i18n="faq_1_a">Server aniqlash odatda 1-3 soniya ichida tugaydi.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q" data-i18n="faq_2_q">Bepulmi?</summary>
+                    <p class="faq-a" data-i18n="faq_2_a">Ha, bot to'liq bepul. Hech qanday yashirin to'lovlar yo'q.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q" data-i18n="faq_3_q">Qaysi tillarda ishlaydi?</summary>
+                    <p class="faq-a" data-i18n="faq_3_a">Hozircha o'zbek va rus tillarida. Tez orada boshqa tillar
+                        qo'shilishi mumkin.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q" data-i18n="faq_4_q">Ma'lumotlarim xavfsizmi?</summary>
+                    <p class="faq-a" data-i18n="faq_4_a">Ha. Bot faqat o'yin ID ni ishlatadi, shaxsiy ma'lumotlaringiz
+                        saqlanmaydi.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q" data-i18n="faq_5_q">Guruhga qo'shilish kerakmi?</summary>
+                    <p class="faq-a" data-i18n="faq_5_a">Ba'zan majburiy guruh o'rnatilishi mumkin. Bu bot ishlashi
+                        uchun kerak.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section" id="start">
+        <div class="container cta-inner">
+            <h2 class="cta-title" data-i18n="cta_title">Hoziroq boshlang</h2>
+            <p class="cta-desc" data-i18n="cta_desc">Telegram'da botni oching va birinchi tekshiruvingizni boring.
+                Bepul, tez, qulay.</p>
+            <a href="https://t.me/checkmlbbidBot" class="btn btn-lg" target="_blank" rel="noopener"
+                data-i18n="cta_button">Botni ochish</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-text" data-i18n="footer_text">Mobile Legends: Bang Bang uchun mustaqil bot.</p>
+            <p class="footer-disclaimer" data-i18n="footer_disclaimer">Bot Moonton bilan bog'liq emas.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
