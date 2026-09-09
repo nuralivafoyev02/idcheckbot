@@ -79,11 +79,14 @@ body {
 
 .nav-brand {
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 1.45rem;
     color: var(--text);
     text-decoration: none;
     letter-spacing: -0.02em;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-actions {
@@ -155,6 +158,13 @@ body {
 
 html[data-theme="light"] .theme-btn .icon-sun { display: block; }
 html[data-theme="light"] .theme-btn .icon-moon { display: none; }
+
+.logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
 /* ===== Language Switcher ===== */
 .lang-switcher {
