@@ -33,7 +33,7 @@
   "faq_1_q": "How fast is the bot?",
   "faq_1_a": "Server detection usually finishes within 1-3 seconds. We use the Telegram API and MLBB API in parallel.",
   "faq_2_q": "Is it free?",
-  "faq_2_a": "Yes, the bot is completely free. No hidden payments.",
+  "faq_2_a": "Yes, it's free. However, resource-intensive features have limits, and you can buy extra limits from admins at cheap prices.",
   "faq_3_q": "What languages does it work in?",
   "faq_3_a": "It works in Uzbek, Russian and English. The language can be changed anytime in the bot.",
   "faq_4_q": "Is my data safe?",

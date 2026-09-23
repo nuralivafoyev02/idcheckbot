@@ -33,7 +33,7 @@
   "faq_1_q": "Bot qanchalik tez ishlaydi?",
   "faq_1_a": "Server aniqlash odatda 1-3 soniya ichida tugaydi. Biz Telegram API va MLBB API ni parallel ishlatamiz.",
   "faq_2_q": "Bepulmi?",
-  "faq_2_a": "Ha, bot to'liq bepul. Hech qanday yashirin to'lovlar yo'q.",
+  "faq_2_a": "Ha, bepul. Lekin ko'p resurs talab qiladigan funksiyalarga limit qo'yilgan va limitlarni administratorlardan arzon narxlarda sotib olishingiz mumkin.",
   "faq_3_q": "Qaysi tillarda ishlaydi?",
   "faq_3_a": "O'zbek, rus va ingliz tillarida. Botda tilni istalgan vaqtda almashtirish mumkin.",
   "faq_4_q": "Ma'lumotlarim xavfsizmi?",
