@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![UZ](https://img.shields.io/badge/UZ-O%27zbek-0099FF?style=for-the-badge)](./lang/uz.json)
 [![RU](https://img.shields.io/badge/RU-Русский-EE0000?style=for-the-badge)](./lang/ru.json)
-[![KZ](https://img.shields.io/badge/KZ-Қазақша-00AF87?style=for-the-badge)](./lang/kz.json)
+[![EN](https://img.shields.io/badge/EN-English-1C79C0?style=for-the-badge)](./lang/en.json)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## Bu nima?
 
-MLBB Server Detector Bot — Mobile Legends: Bang Bang o'yin ID orqali serverni aniqlash, ulanmalarni tekshirish va to'liq profil ko'rish imkonini beruvchi bepul Telegram bot.
+MLBB Server Detector Bot — Mobile Legends: Bang Bang o'yin ID orqali serverni aniqlash, to'liq profil ko'rish va parolni tiklash imkonini beruvchi bepul Telegram bot.
 
 **Landing page** — bot haqida ma'lumot beruvchi zamonaviy veb-sayt.
 
@@ -31,7 +31,7 @@ MLBB Server Detector Bot — Mobile Legends: Bang Bang o'yin ID orqali serverni 
 | Imkoniyat | Tavsif |
 |-----------|--------|
 | 🔍 **Server aniqlash** | O'yin ID ni yuboring — qaysi serverda ekanligingizni darhol aytadi |
-| 🔗 **Ulanmalar tekshirish** | Akkauntingiz qaysi qurilmalarga bog'langanini ko'ring |
+| 🔑 **Parolni tiklash** | Moonton pochtangizni kiriting — rasmiy yangi parol formasini elektron pochtangizga yuboramiz |
 | 👤 **To'liq profil** | Rank, herolar, statistika — barchasi bitta xabarda |
 | ⚡ **Inline rejim** | Istalgan chatda @bot + ID yozing, guruhdan chiqmagan holda tekshiring |
 
@@ -39,7 +39,7 @@ MLBB Server Detector Bot — Mobile Legends: Bang Bang o'yin ID orqali serverni 
 
 ## Landing Page Xususiyatlari
 
-- **3 tilli qo'llab-quvvatlash** — O'zbek, Русский, Қазақша
+- **3 tilli qo'llab-quvvatlash** — O'zbek, Русский, English
 - **Dark / Light tema** — avtomatik aniqlash yoki qo'lda almashtirish
 - **Responsive dizayn** — desktop va mobile uchun moslashuvchan
 - **Testimonial slider** — foydalanuvchilar sharhlari avtomatik siljiydi
@@ -58,7 +58,7 @@ mlbbcheckbot-landingpage/
 ├── lang/
 │   ├── uz.json         # O'zbek tarjimalari
 │   ├── ru.json         # Rus tarjimalari
-│   └── kz.json         # Qozoq tarjimalari
+│   └── en.json         # Ingliz tarjimalari
 └── public/
     └── logo.jpg        # Bot logosi
 ```
@@ -136,7 +136,7 @@ Telegram bot Node.js yozilgan va quyidagi API'lardan foydalanadi:
 
 Bot funksiyalari:
 - Server aniqlash (ID orqali)
-- Ulanmalarni tekshirish
+- Parolni tiklash
 - To'liq profil ko'rish
 - Inline rejim
 - Admin paneli (statistika, broadcast)

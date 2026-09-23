@@ -1,9 +1,9 @@
 (function () {
     'use strict';
 
-    var SUPPORTED_LANGS = ['uz', 'ru', 'kz'];
+    var SUPPORTED_LANGS = ['uz', 'ru', 'en'];
     var DEFAULT_LANG = 'uz';
-    var LANG_LABELS = { uz: 'UZ', ru: 'RU', kz: 'KZ' };
+    var LANG_LABELS = { uz: 'UZ', ru: 'RU', en: 'EN' };
 
     function loadTranslations(lang) {
         return fetch('./lang/' + lang + '.json').then(function (res) {
@@ -25,9 +25,7 @@
         if (SUPPORTED_LANGS.indexOf(lang) === -1) {
             lang = DEFAULT_LANG;
         }
-        // Format document lang for UZ special case
-        var htmlLang = lang === 'kz' ? 'kk' : lang;
-        document.documentElement.lang = htmlLang;
+        document.documentElement.lang = lang;
 
         document.querySelectorAll('.lang-option').forEach(function (opt) {
             opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
@@ -77,7 +75,7 @@
         if (!saved) {
             var navLang = (navigator.language || DEFAULT_LANG).toLowerCase();
             if (navLang.indexOf('ru') === 0) saved = 'ru';
-            else if (navLang.indexOf('kk') === 0 || navLang.indexOf('kz') === 0) saved = 'kz';
+            else if (navLang.indexOf('en') === 0) saved = 'en';
             else saved = DEFAULT_LANG;
         }
         setLang(saved);
